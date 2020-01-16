@@ -1,0 +1,49 @@
+.checked-task
+  text-decoration: line-through
+  color: #676d74
+.checkbox
+  cursor: pointer
+  input
+    display: none
+    + .checkbox-span
+      display: inline-block
+      width: 19px
+      height: 19px
+      margin: -2px 10px 0 0
+      vertical-align: middle
+      background: url("./check_radio_sheet.png") left top no-repeat
+    &:checked + .checkbox-span
+      background: url("./check_radio_sheet.png") -19px top no-repeat
+
+.bg-box__width__radius
+  width: 100%
+  max-width: 520px
+  border-radius: 15px
+  .task-box
+    word-break: break-word
+    display: flex
+    justify-content: space-between
+    .task-detail-box
+      flex-grow: 1
+      position: relative
+      .delete-task
+        display: none
+        position: absolute
+        right: 0
+        width: 18px
+        height: 19px
+        background: url("./dust-bin.svg") no-repeat center
+      &:hover
+        cursor: pointer
+        .delete-task
+          display: block
+      .task
+        background: inherit
+        border: none
+        padding: 0 5px 0 0
+        width: 100%
+        &:hover
+          cursor: text
+    .date
+      min-width: 76px
+      text-align: right
