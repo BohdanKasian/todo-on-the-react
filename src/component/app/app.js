@@ -16,7 +16,7 @@ export default class App extends Component{
 
     state = {
       Todo: [],
-      filter: "finished"
+      filter: "all"
     };
     createTodoItem = (text, date) => {
         return {
